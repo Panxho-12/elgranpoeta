@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <div class="alert alert-sucess display 1">LISTADO DE LIBROS</div>
+
+    {%if libros %}
+
+    <table class="table table-striped table-inverse table-responsive">
+        <thead class="thead-inverse">
+            <tr>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Genero</th>
+                <th>Disponibilidad</th>
+                <th>Fecha</th>
+                <th>Cantidad</th>
+            </tr>
+            </thead>
+            <tbody>
+                {% for books in libros %}
+                <tr>
+                    <td scope="row">{{ books.id}}</td>
+                    <td>{{ books.titulo }}</td>
+                    <td>{{ books.autor }}</td>
+                    <td>{{ books.genero }}</td>
+                    <td>{{ books.disponible }}</td>
+                    <td>{{ books.fecha }}</td>
+                    <td>{{ books.cantidad }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+
+    {% else %}
+
+        <div class="alert alert-primary" role="alert">
+            <strong>No se encuentras libros</strong>
+        </div>
+
+    {% endif %}
+
+
+    
+    <a href="../agregarlibros" class="btn btn-info float-end">Agregar Libro</a>
+</body>
+</html>
