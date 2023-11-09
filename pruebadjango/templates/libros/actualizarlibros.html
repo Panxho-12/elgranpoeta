@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body class="container mt-5">
-    <div class="alert alert-info display-1 text-center">LISTADO DE LIBROS</div>
-
+<body>
+    <div>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit">Guardar Libros</button>
+            <button type="submit">Actualizar Libros</button>
         </form>
-        
-    <a href ="/libros" class="btn btn-info mt-5">LIBROS</a>
+    </div>
 </body>
 </html>

@@ -32,6 +32,8 @@
                     <td>{{ books.disponible }}</td>
                     <td>{{ books.fecha }}</td>
                     <td>{{ books.cantidad }}</td>
+                    <td><a href="{% url 'actualizarLibros' books.id %}">Actualizar</a></td>
+                    <td><a href="{% url 'eliminarLibros' books.id %}">Eliminar</a></td>  
                 </tr>
                 {% endfor %}
             </tbody>
